@@ -1,0 +1,89 @@
+<main role="main" class="container-fluid profile-body-main pt-4 bg-light">
+    <div class="d-flex flex-column flex-md-row align-items-start">
+        <div class="col-12 col-md-4 col-lg-4 col-xl-3">
+            <section class="d-flex flex-column position-relative col-12 profile-bio">
+                <div class="p-3 profile-bio-avatar-2  position-absolute">
+                    <img class=" mx-auto d-block" id = "photo" style="border-radius:50% !important; width:200px;height:200px;" src="{{server}}{{photo}}"/>
+                </div>
+                {% if  who == 'me'%}
+                <form action="../user/uploadPhoto" method="post" enctype="multipart/form-data" id="form-photo" style="display: none; margin-top:50px">
+                    Select image to upload:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit">
+                </form>
+                {% endif %}
+                <span class="h3 font-weight-bold mt-3 pt-3">{{name}}</span>
+                <span class="h7 link text-primary">@{{username}}</span>
+                <span class="h7 text-white font-weight-bold mb-4"
+                >{{ bio }}</span>
+                <span style="display: none" id="user-id">{{ id }}</span>
+                {% if  who != 'me'%}
+                <button class="btn btn-primary col-md-12 col-lg-12 col-sm-12 col-12 "
+                        style="background-color: #3a5bb2;border: none" id="follow-button">{{followbutton}}</button>
+                {% endif %}
+                <div class="person-menu-mobile col-md-12 col-lg-12 col-sm-12 col-xl-12 pb-3">
+                    <div class="row flex-row">
+                        <div
+                                class="flex-column text-muted text-center"
+                                style="font-size: 11px;"
+                        >
+                            Tweets <br/><span class="text-info h4">{{posts|length}}</span>
+                        </div>
+                        <div
+                                class="flex-column text-muted text-center pl-3"
+                                style="font-size: 11px;"
+                        >
+                            Following <br/><span class="text-info h4">{{following|length}}</span>
+                        </div>
+                        <div
+                                class="flex-column text-muted text-center pl-3"
+                                style="font-size: 11px;"
+                        >
+                            Followers <br/><span class="text-info h4">{{followers|length}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-hiden"
+                            style="background-color: #0084B4;border: none">
+                        <a href="inform">EDIT PROFILE</a>
+                    </button>
+                </div>
+            </section>
+        </div>
+        <div class="col-12 col-md-8 col-lg-8 col-xl-6 d-flex flex-column flex-md-row">
+            <div class="container">
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- TWEET PANEL -->
+                    <div class="tab-pane active" id="tweets" role="tabpanel">
+                        <div class="tweet-conteiner">
+
+                            {{ include('user/blocks/tweet-form.twig')  }}
+
+                        </div>
+                    </div>
+                    <!-- TWEET PANEL END -->
+                    <!-- FOLLOWING -->
+                    <script src="../js/follow.js"></script>
+                    <div class="tab-pane" id="following" role="tabpanel">
+                        <div class="d-flex flex-wrap" id = "user-cards">
+                            {% set person = following %}
+                            {% if  person != null %}
+                            {{ include('user/blocks/user-card-main.twig')  }}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <!-- FOLLOWING END-->
+                    <div class="tab-pane" id="followers" role="tabpanel">
+                        <div class="d-flex flex-wrap" id = "user-cards">
+                            {% set person = followers %}
+                            {% if  person != null %}
+                                {{ include('user/blocks/user-card-main.twig')  }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      

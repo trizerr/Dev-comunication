@@ -1,0 +1,123 @@
+@import url('../fonts/HelveticaNeue/stylesheet.css');
+@import url('../scss/index.scss');
+@import url('../scss/login.scss');
+@import url('../scss/register.scss');
+@import url('../scss/profile.scss');
+
+.home-body {
+  padding-top: 30rem;
+  background-color: #0084b4;
+  font-family: HelveticaNeueCyr, sans-serif;
+}
+main {
+  background-color: #E3EDF0;
+}
+
+/* ----navigation----*/
+.nav-link-color {
+  color: #66757f !important;
+}
+.nav-icons:before {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* ----/navigation----*/
+
+/* ----profile---- */
+.profile-bio-avatar {
+  margin-top: -50%;
+  border: 8px solid #ffffff;
+  border-radius: 20px;
+}
+.profile-bio-avatar img {
+  width: 100%;
+  border-radius: 20px;
+}
+.profile-bio-location i {
+  width: 20px;
+}
+.profile-bio-website i {
+  width: 20px;
+}
+.profile-tweet-wrapper {
+  border: 1px solid #abd5e5;
+  border-radius: 15px;
+  background-color: rgba(0, 132, 180, 0.14);
+}
+.profile-tweet-wrapper-title {
+  border: 1px solid #abd5e5;
+  background: #ffffff;
+}
+.profile-wrapper {
+  border: 1px solid #ebf0f3;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+.button-follow {
+  border: 1px solid #ebf0f3;
+  border-radius: 5px;
+  background-color: #fdfdfe;
+}
+.h7 {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+/* ----/profile---- */
+.person-menu {
+  padding-top: 2%;
+}
+.topnav div:hover {
+  border-bottom: 3px solid #0084b4;
+}
+.border-bottom {
+  border-bottom: 1px solid #d8e2e8;
+}
+.topnav div.active {
+  border-bottom: 3px solid #0084b4;
+}
+.tweet {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #d8e2e8;
+}
+.placeholder {
+  color: #d4d8db;
+  background-color: #a3acb2;
+  padding-left: 15px !important;
+}
+
+.placeholder::placeholder {
+  color: #d4d8db;
+}
+.search {
+  margin-left: 166px;
+  color: #d4d8db;
+  position: absolute;
+}
+.right-side {
+  flex-wrap: nowrap;
+}
+.visible {
+  background-color: #0084b4;
+}
+.flip-icon {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: 'FlipH';
+}
+.icon {
+  color: #ccd6dd;
+}
+.link {
+  color: #0084b4;
+}
+
+.row {
+  margin: 0;
+}

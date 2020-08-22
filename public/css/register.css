@@ -1,0 +1,71 @@
+/* ----Fonts---- */
+@import url('../fonts/HelveticaNeue/stylesheet.css');
+
+a {
+  color: #fff;
+}
+
+ /* button a:hover {
+   text-decoration: none;
+   color: #fff;
+ } */
+/* ----/Fonts----*/
+.register-body {
+  background-color: #e3edf0;
+  font-family: HelveticaNeueCyr, sans-serif;
+}
+
+input[type='text'] {
+  outline: none;
+  border-radius: 0;
+}
+
+label {
+  color: #737475;
+}
+.visible {
+  background-color: #0084b4;
+}
+/* ----navigation----*/
+.nav-link-color {
+  color: #66757f !important;
+}
+.nav-icons:before {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.navbar {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.register {
+  margin-top: 75px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+.form-control {
+  border: none;
+  /* border-bottom: 2px solid #ced4da; */
+  box-shadow: 0px 2px #ced4da;
+  padding: 0.375rem 0;
+  border-radius: 0;
+}
+
+.data {
+  margin-top: 60px;
+}
+
+.text-primary a {
+  color: #1597f4;
+}
+
+.text-primary a:hover {
+  color: #1597f4;
+}
+.invalid-labels {
+  display: none;
+  color: #f0695a;
+  font-size:14px;
+}

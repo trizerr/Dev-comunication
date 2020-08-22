@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-md bg-white fixed-top">
+    <div class="col-12 col-md-12 col-xl-10 offset-xl-1">
+        <button class="navbar-toggler visible" type="button" id="sidebarCollapse" data-toggle="modal" data-target=".side-bar-modal">
+            <i class="fas fa-list text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-secondary font-weight-bold" href="home"><i class="fas fa-home nav-icons"></i>Home
+                        <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <!-- Huge modal -->
+                    <a class="nav-link text-secondary font-weight-bold"  href="" data-toggle="modal" data-target=".bd-example-modal-xl">
+                        <i class="far fa-envelope font-weight-bold"></i> Messages
+                    </a>
+
+                    <div class="modal fade bd-example-modal-xl" tabindex="2" role="dialog"
+                         aria-labelledby="myHugeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content message-body" z-index="1">
+                                {{ include('user/blocks/messange-modal.twig') }}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secondary font-weight-bold btn-toggle-menu" style="cursor: pointer">
+                        <i class="fas fa-user-friends""></i> My follow
+                    </a>
+                </li>
+            </ul>
+
+            <form class="form-inline my-lg-0 right-side" method="post">
+
+                <input class="form-control mr-sm-2 bg-white focus-none" style="border-color: #e64e6c" type="text"  placeholder="Search" aria-label="Search" id="search"  />
+                <a href="search">
+                    <i class="fas fa-search search pr-3" style="color: #e64e6c"></i>
+                </a>
+                <button class="btn btn-post rounded-pill font-weight-bold mr-2" type="button" data-toggle="modal" data-target=".modal-tweet">
+                    <a href="profile">Profile</a>
+                </button>
+                <button id ="logout" class="btn rounded-pill font-weight-bold" name="logout" type="submit"> <a href="logout">Logout</a></button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- modal side-bar -->
+
+<div class="modal fade side-bar-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg m-0">
+        <div class="modal-content">
+            <!-- Sidebar -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <img class="user-avatar-side rounded-circle" src="{{ server }}{{ photo }}" style="width:100px; height: 100px"/>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="d-flex flex-column p-1 mt-4">
+                        <span class="h5 font-weight-bold m-0" style="color: #fff">{{firstname}} {{lastname}}</span>
+                        <span class="h6 link" style="color: #fff">@{{ username }}</span>
+                    </div>
+                    <div class="row">
+                        <div class="text-center" style="font-size: 1.3em; color: #fff">
+                            <span class="text-info h4 pl-2">{{following|length}}</span> Following
+                        </div>
+                        <div class="text-center" style="font-size: 1.3em; color: #fff">
+                            <span class="text-info h4 p-2">{{followers|length}}</span>Followers
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="home">Home</a>
+                    </li>
+                    <li>
+                        <a href="profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="search">Search</a>
+                    </li>
+                    <li>
+                        <a href="../public/..">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER END -->

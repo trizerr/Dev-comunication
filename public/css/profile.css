@@ -1,0 +1,269 @@
+/* tweets, following, followers */
+.profile-body {
+    padding-top: 30rem;
+    background: url("../img/duotone (5).png") no-repeat;
+    background-size: 100%;
+    font-family: HelveticaNeueCyr, sans-serif;
+}
+
+.profile-body-main {
+    min-height: 100vh;
+    background: url("../img/duotone.png");
+}
+
+a.text-secondary:focus,
+a.text-secondary:hover {
+    color: #e64e6c !important;
+}
+
+.navbar-div {
+    display: flex;
+}
+
+.person-menu-profile {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding-top: 0.5rem;
+}
+
+.person-menu-profile-tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.person-menu-profile-tabs-edit {
+    display: inline;
+}
+
+.person-menu-profile-tabs-edit:hover {
+    text-decoration: none;
+}
+
+.user-card-header {
+    height: 6rem;
+    background-color: #0084b4;
+}
+
+.user-card-header-body-btn-link {
+    font-size: .8rem;
+    text-transform: uppercase;
+    background-color: #0084b4;
+}
+
+.card-bio-avatar {
+    border: 2px solid #ffffff;
+    max-width: 150px;
+    min-width: 100px;
+    top: -75px;
+    left: -25px;
+}
+
+.card-bio-avatar img {
+    width: 100%;
+}
+
+.profile-bio > span {
+    color: #e64e6c;
+}
+
+.profile-bio-avatar-2 {
+    max-width: 250px;
+    min-width: 200px;
+    min-height: 200px;
+    top: -180px;
+    color: dodgerblue;
+    background-color: transparent;
+    position: relative;
+}
+
+.profile-bio-avatar-2 img {
+    width: 70%;
+    border: 10px solid white;
+}
+
+/* @media only screen and (max-width: 1200px) {
+  left:0;
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+  top: -160px;
+} */
+
+
+.tabs {
+    cursor: pointer;
+}
+
+.person-menu-mobile,
+.btn-hiden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .peroson-menu-hiden {
+        display: none;
+    }
+
+    .person-menu-mobile {
+        display: block;
+    }
+
+    .btn-hiden {
+        display: block;
+    }
+}
+
+.folow-title {
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    /*background-color: ##673AB7;*/
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/*#sidebar-wrapper {*/
+/*    box-shadow: inset -1px 0px 0px 0px #DDDDDD;*/
+/*}*/
+
+/*#wrapper.toggled #sidebar-wrapper {*/
+/*    width: 250px;*/
+/*}*/
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+/*#wrapper.toggled #page-content-wrapper {*/
+/*    position: absolute;*/
+/*    margin-right: -250px;*/
+/*}*/
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin-top: 15px;
+    text-indent: 20px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #e64e6c;
+    border: 3px solid #e64e6c;
+    background-color: #fff;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #e64e6c;
+    border: 3px solid #fff;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+    background-color: #e64e6c;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+#sidebar-wrapper li.active > a:after {
+    border-right: 17px solid #f4f3ef;
+    border-top: 17px solid transparent;
+    border-bottom: 17px solid transparent;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -1px;
+}
+
+.navbar .navbar-nav > li > a p {
+    display: inline-block;
+    margin: 0;
+}
+p {
+    font-size: 16px;
+    line-height: 1.4em;
+}
+
+.navbar-default {
+    background-color: #f4f3ef;
+    border:0px;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+btn-menu {
+    border-radius: 3px;
+    padding: 4px 12px;
+    margin: 14px 5px 5px 20px;
+    font-size: 14px;
+    float: left;
+}

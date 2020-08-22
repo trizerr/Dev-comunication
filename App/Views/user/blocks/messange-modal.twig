@@ -1,0 +1,131 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootstrap snippet">
+    <div class="tile tile-alt" id="messages-main">
+        <div class="ms-menu">
+            <div class="ms-user clearfix">
+                <img src="{{server}}{{photo}}" alt="" class="img-avatar pull-left">
+                <div>{{name}}</div>
+            </div>
+
+            <div class="p-15">
+                <div class="dropdown">
+                    <a class="btn btn-block text-white" style="background-color: #e64e6c" href="" data-toggle="dropdown">Messages <i class="caret m-l-5"></i></a>
+
+                    <ul class="dropdown-menu dm-icon w-100">
+                        <li><a href=""><i class="fa fa-envelope"></i> Messages</a></li>
+                        <li><a href=""><i class="fa fa-users"></i> Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="list-group">
+                <a class="list-group-item media" href="">
+                    <div class="pull-left">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
+                    </div>
+                    <div class="media-body">
+                        <small class="list-group-item-heading">Name Lastname</small><br>
+                        <small class="list-group-item-text c-gray">status</small>
+                    </div>
+                </a>
+
+                <a class="list-group-item media" href="">
+                    <div class="pull-left">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
+                    </div>
+                    <div class="media-body">
+                        <small class="list-group-item-heading">Name Lastname</small><br>
+                        <small class="list-group-item-text c-gray">status</small>
+                    </div>
+                </a><a class="list-group-item media" href="">
+                    <div class="pull-left">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
+                    </div>
+                    <div class="media-body">
+                        <small class="list-group-item-heading">Name Lastname</small><br>
+                        <small class="list-group-item-text c-gray">status</small>
+                    </div>
+                </a>
+
+                <a class="list-group-item media" href="">
+                    <div class="pull-left">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
+                    </div>
+                    <div class="media-body">
+                        <small class="list-group-item-heading">Name Lastname</small><br>
+                        <small class="list-group-item-text c-gray">status</small>
+                    </div>
+                </a>
+
+                <a class="list-group-item media" href="">
+                    <div class="pull-left">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">
+                    </div>
+                    <div class="media-body">
+                        <small class="list-group-item-heading">Name Lastname</small><br>
+                        <small class="list-group-item-text c-gray">status</small>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="ms-body d-flex flex-column justify-content-between">
+            <div class="action-header clearfix">
+
+                <div class="pull-left hidden-xs">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar m-r-10">
+                    <div class="lv-avatar pull-left">
+
+                    </div>
+                    <span>David Parbell</span>
+                </div>
+
+                <ul class="ah-actions actions">
+                    <li>
+                        <a href="">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+{#            <div class="message-feed media">#}
+{#                <div class="pull-left">#}
+{#                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="img-avatar">#}
+{#                </div>#}
+{#                <div class="media-body">#}
+{#                    <div class="mf-content">#}
+{#                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Ultricies mi eget mauris pharetra et ultrices.                    </div>#}
+{#                    <small class="mf-date"><i class="fa fa-clock-o"></i> time</small>#}
+{#                </div>#}
+{#            </div>#}
+
+{#            <div class="message-feed right">#}
+{#                <div class="pull-right">#}
+{#                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="img-avatar">#}
+{#                </div>#}
+{#                <div class="media-body">#}
+{#                    <div class="mf-content">#}
+{#                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.#}
+{#                    </div>#}
+{#                    <small class="mf-date"><i class="fa fa-clock-o"></i> time</small>#}
+{#                </div>#}
+{#            </div>#}
+           <div id="messages">
+               {{ include('user/blocks/message.twig') }}
+           </div>
+            <div class="msb-reply">
+                <form method="post" id="message-form" action="" class="message-form">
+                    <img src="{{server}}{{ photo }}" alt="" class="img-avatar message-left">
+                    <textarea  class="message-form" id="textMessage" name="m-body" placeholder="What's on your mind..."></textarea>
+                    <button type="button" class="send-message" id="send"><i class="far fa-hand-point-right" style="color:#e64e6c"></i></button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="messageRoot"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../js/messages.js"></script>
+

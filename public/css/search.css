@@ -1,0 +1,134 @@
+button:active, button:focus, input:focus,  input:active {
+    outline: none;
+  }
+
+.search-body {
+    padding-top: 5rem;
+    /*background-color: #e3edf0;*/
+    background: url("../img/duotone.png");
+    font-family: HelveticaNeueCyr, sans-serif;
+}
+
+.search-hiden {
+    display: none;
+}
+
+.profile-bio-search {
+    background: linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 59%, #0084b4 60%, #e64e6c 100%);
+}
+
+.user-avatar {
+    font-size: 75px;
+    background-color: #f8f9fa;
+    border: 3px solid #fff;
+    height: 75px;
+}
+
+/* sidebar   */
+
+.user-avatar-side {
+    font-size: 75px;
+    color: #fff;
+}
+
+.side-bar-modal {
+    width: 300px;
+} 
+
+#sidebar {
+    height: 99.5vh;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+
+@media (max-width: 768px) {
+    .main-search {
+        display: none;
+    }
+    .search-hiden {
+        display: block;
+    }
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.dropdown-toggle:focus {
+    background: #0084b4;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #fff;
+    color: #6c757d;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #0084b4;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.3em;
+    display: block;
+    padding-left: 20px;
+}
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #0084b4;
+}
+
+/*#sidebar ul li.active > a, a[aria-expanded="true"] {*/
+/*    color: #6c757d;*/
+/*    background: #fff;*/
+/*}*/
+
+a[aria-expanded="true"]:focus {
+    color: #0084b4;
+    background: #fff;
+}
+/*ul ul a {*/
+/*    font-size: 0.9em !important;*/
+/*    padding-left: 30px !important;*/
+/*    background: #fff;*/
+/*    color: #6c757d;*/
+/*}*/
+
+.close {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+/* sidebar */
+
+#search {
+    padding-left: 10px;
+    border-radius: 50px;
+    border: 2px solid #6c757d;
+}
+
+.mobile-search {
+    background-color:#e3edf0;
+    color: #6c757d;
+}
+
+.mobile-search:focus {
+    background-color:#e3edf0;
+    border-bottom: 1px solid #0084b4;
+}

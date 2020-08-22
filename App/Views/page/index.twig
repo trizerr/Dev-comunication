@@ -1,0 +1,25 @@
+{% extends 'layouts/default.twig' %}
+
+{% block title %}Welcome{% endblock %}
+{% block content %}
+  <body class="start-body">
+    <div class="col-12 col-md-7 col-xl-6 offset-xl-1 m-auto">
+        <div class="modal-body window-body">
+            <h1 class="index-title font-weight-bold mb-2" id="exampleModalLabel">
+                dev <span style="color: #e64e6c; font-weight: bold">{</span>communication<span style="color: #e64e6c">}</span>
+            </h1>
+        </div>
+        <div class="sonar-wrapper d-flex row border-0 pt-5">
+            <a href="user/registration" class="sonar-emitter p-2 font-weight-bold " role="button" aria-pressed="true">
+                SIGN UP
+                <div class="sonar-wave"></div>
+            </a>
+
+            <a href="user/login" class="sonar-emitter p-2 font-weight-bold" style = "font-weight: bold;" role="button" aria-pressed="true">
+                LOGIN
+                <div class="sonar-wave"></div>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

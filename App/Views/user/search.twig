@@ -1,0 +1,34 @@
+{% extends 'layouts/default.twig' %}
+{% block title %}Search{% endblock %}
+{% block content %}
+<body class="search-body">
+{{ include('user/blocks/folow-panel.twig') }}
+   {{ include('user/blocks/header.twig') }}
+    <div class="container-fluid ">
+        <div class="row">
+            {{ include('user/blocks/min-profile-card.twig') }}
+
+            <div id = "search-result" class="col-xl-8">
+
+            </div>
+
+         <div class="search-hiden">
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate="">
+                        <div class="col-12">
+                            <input type="text" class="form-control mobile-search" id="mobile-search" placeholder="Search Twitter">
+                            <button type="button" class="btn btn-outline-primary mt-3 pl-3 pr-3">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <div class="search-hiden-title text-center mt-3">
+                                <h3>Search for people on twitter.</h3>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ include('user/blocks/footer-bird.twig') }}
+   <script src="../js/search.js"></script>
+{% endblock %}

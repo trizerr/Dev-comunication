@@ -1,0 +1,39 @@
+{% extends 'layouts/default.twig' %}
+{% block title %}Login{% endblock %}
+{% block content %}        
+    {{ include('user/blocks/header-login-signup.twig') }}
+    <div class=" row align-items-center justify-content-center">
+    <div class="register col-10 col-lg-5 col-xl-5  ">
+        <div class="modal-header col-12 col-md-11 col-xl-10 m-auto px-0">
+            <h4 class="modal-title" id="exampleModalLabel">Log in to dev <span style="color: #e64e6c; font-weight: bold">{</span>communication<span style="color: #e64e6c">}</span>?</h4>
+        </div>
+        <div class="modal-body col-12 col-md-10 col-xl-10 m-auto p-0">
+            <form class="needs-validation" novalidate="" id = "login-form" method="post">
+                <div class="row">
+                    <div class="col-12 mt-4 mb-5">
+                        <input type="text" class="form-control" name="user-email" id="email" placeholder="Email or Username" value="" required="">
+                        <label id="invalid-email" class="invalid-labels">Invalid Email</label>
+                    </div>
+                </div>
+
+                <div class="data col-12 mt-4 mb-5 p-0">
+                    <input type="password" class="form-control" name="user-password" id="pass" placeholder="Password" required="">
+                    <label id="invalid-password" class="invalid-labels">Invalid password</label>
+                    {% if error is defined %}
+                        <label class = "php-error">Invalid password or email</label>
+                    {% endif %}
+                </div>
+
+                <input  id ="login-button" type="button" class="btn rounded-pill font-weight-bold px-4 py-2" style="background-color: #e64e6c; color: #fff;" aria-pressed="true" value="LOGIN">
+
+            </form>
+        </div>
+        <div class="modal-footer justify-content-start mt-3">
+            <h5>Need an account?</h5>
+            <button type="button" class="btn footer-btn" style="color: #e64e6c;" data-dismiss="modal" data-toggle="modal"
+                    data-target=".login"><a href="registration">SIGN UP</a>
+            </button>
+        </div>
+    </div>
+    </div>
+{% endblock %}

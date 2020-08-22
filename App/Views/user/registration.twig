@@ -1,0 +1,143 @@
+{% extends 'layouts/default.twig' %}
+{% block title %}Registration{% endblock %}
+{% block content %}     
+    {{ include('user/blocks/header-login-signup.twig') }}
+<div class=" row align-items-center justify-content-center">
+    <div class="register col-10 col-lg-7 col-xl-7  mb-5">
+         <div class="modal-header">
+           <h4 class="modal-title" id="exampleModalLabel">Create an account</h4>
+         </div>
+         <div class="modal-body">
+           <form class="needs-validation" id = "register-form" novalidate="" method="post">
+             <div class="row justify-content-between">
+               <div class="col-md-5 mt-4 mb-3 pl-3">
+                 <input
+                   type="text"
+                   class="form-control"
+                   id="firstName"
+                   placeholder="First name"
+                   value=""
+                   required=""
+                   name="firstname"
+                 />
+                 <label id="invalid-first-name" class="invalid-labels">
+                   Valid first name is required.</label
+                 >
+               </div>
+               <div class="col-md-5 mt-4 mb-5 pr-3">
+                 <input
+                   type="text"
+                   class="form-control"
+                   id="lastName"
+                   placeholder="Last name"
+                   value=""
+                   required=""
+                   name="lastname"
+                 />
+                 <label id="invalid-last-name" class="invalid-labels">
+                   Valid last name is required.</label
+                 >
+               </div>
+             </div>
+             <div class="">
+               <input
+                 type="email"
+                 class="form-control"
+                 id="email"
+                 placeholder="Email"
+                 name="email"
+               />
+               <label id="invalid-email" class="invalid-labels"
+                 >Invalid Email</label
+               >
+               {% if email_err is not empty %}
+                 <label class = "php-error">Such email already exists</label>
+               {% endif %}
+             </div>
+
+             <div class="data">
+               <div class="input-group">
+                 <input
+                   type="text"
+                   class="form-control"
+                   id="username"
+                   placeholder="Username"
+                   required=""
+                   name="username"
+                 />
+               </div>
+               <label id="invalid-username" class="invalid-labels"
+                 >Username must be at least three(3) characters long and must can
+                 contain one underscore and number</label
+               >
+               {% if username_err is not empty %}
+                 <label class = "php-error">Such username already exists</label>
+               {% endif %}
+             </div>
+
+             <div class="data">
+               <input
+                 type="date"
+                 class="form-control"
+                 style="border-left: none;"
+                 id="date"
+                 placeholder="Date of birth"
+                 required=""
+                 name="dob"
+               />
+               <label id="invalid-date" class="invalid-labels">Invalid Date</label>
+             </div>
+
+             <div class="data">
+               <input
+                 type="password"
+                 class="form-control"
+                 id="pass"
+                 placeholder="Password"
+                 required=""
+                 name="bio"
+               />
+               <label id="invalid-password" class="invalid-labels"
+                 >Password must be at least 8 characters long. Must contain one
+                 special character, number and UpperCase</label
+               >
+             </div>
+
+             <div class="data mb-5">
+               <input
+                 type="password"
+                 class="form-control"
+                 id="pass-repeat"
+                 placeholder="Confim password"
+                 name="password"
+               />
+               <label id="invalid-pass-repeat" class="invalid-labels"
+                 >Passwords dont match</label>
+             </div>
+
+             <input
+               class="btn rounded-pill font-weight-bold px-4 py-2"
+               style="background-color: #e64e6c; color: #fff;"
+               aria-pressed="true"
+               type="button"
+               id="submit-button"
+              value="SUBMIT"
+             />
+           </form>
+         </div>
+         <div class="modal-footer justify-content-start mt-3">
+           <h5>Already using dev <span style="color: #e64e6c; font-weight: bold">{</span>communication<span style="color: #e64e6c">}</span>?</h5>
+           <button
+             type="button"
+             class="btn footer-btn"
+             style="color: #e64e6c"
+             data-dismiss="modal"
+             data-toggle="modal"
+             data-target=".login"
+           >
+             <a href="login">LOGIN</a>
+           </button>
+         </div>
+       </div>
+</div>
+ {% endblock %}

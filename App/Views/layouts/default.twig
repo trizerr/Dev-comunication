@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="{{ description }}" />
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="../public/img/logo.svg" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9317b04617.js" crossorigin="anonymous"></script>
+</head>
+{% block content %}{% endblock %}
+<link rel="stylesheet" type="text/css" href="../css/home.css">
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<link rel="stylesheet" type="text/css" href="../css/inform.css">
+<link rel="stylesheet" type="text/css" href="../css/login.css">
+<link rel="stylesheet" type="text/css" href="../css/profile.css">
+<link rel="stylesheet" type="text/css" href="../css/register.css">
+<link rel="stylesheet" type="text/css" href="../css/search.css">
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script>
+                window.jQuery ||
+                    document.write(
+                        '<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>'
+                    );
+                $(document).ready(function(){
+                    $(".nav-tabs a").click(function(){
+                        $(this).tab('show');
+                    });
+                });
+                $(function(){
+                    if ($('#ms-menu-trigger')[0]) {
+                        $('body').on('click', '#ms-menu-trigger', function() {
+                            $('.ms-menu').toggleClass('toggled');
+                        });
+                    }
+                });
+                $(function(){
+                    $(".btn-toggle-menu").click(function() {
+                        $("#wrapper").toggleClass("toggled");
+                    });
+                })
+            </script>
+            <script src="../vendor/bootstrap/js/bootstrap.bundle.js"></script>
+            <script src="../js/index.js"></script>
+<script src="../js/photo.js"></script>
+<script src="../js/follow.js"></script>
+</body>

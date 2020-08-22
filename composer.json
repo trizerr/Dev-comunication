@@ -1,0 +1,21 @@
+{
+    "name": "predv/twitter-php",
+    "authors": [
+        {
+            "name": "Nina Herasymova",
+            "email": "predvoditeldvoryanstva@gmail.com"
+        }
+
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App",
+            "Core\\": "Core",
+            "Controllers\\": "App/Controllers"
+        }
+    },
+    "require": {
+        "twig/twig": "3.0",
+        "ext-pdo": "*"
+    }
+}

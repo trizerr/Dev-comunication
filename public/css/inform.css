@@ -1,0 +1,36 @@
+.inform-body {
+  padding-top: 3.5rem;
+  background-color: #E3EDF0;
+  font-family: HelveticaNeueCyr, sans-serif;
+}
+.nav-link-color {
+  color: #66757f !important;
+}
+.nav-icons:before {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.inform-row {
+  padding-top: 20px;
+}
+.profile-bio-inform {
+  background: linear-gradient(
+    0deg,
+    #ffffff 0%,
+    #ffffff 59%,
+    #0084b4 60%,
+    #0084b4 100%
+  );
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.modal-body-inform {
+  padding-bottom: 15px;
+}
+.password-inform {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+.modal-backdrop {
+  z-index: 1;
+}

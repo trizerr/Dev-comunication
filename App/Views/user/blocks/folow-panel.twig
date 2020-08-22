@@ -1,0 +1,21 @@
+<div id="wrapper" class="wrapper-content toggled">
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a href="#" class="folow-title">
+                MY FOLLOW
+            </a>
+            {% for i in 0..following|length-1 %}
+            <li>
+                <a href="/user/{{cycle(following[i]['id'], i)}}" class="d-flex align-items-center pl-3">
+                    <img src="{{server}}{{cycle(following[i]['photo'], i)}}" alt="" class="img-avatar pull-left">
+                    <div class="d-flex flex-column" >
+                        <span>{{cycle(following[i]['firstname'], i)}} {{cycle(following[i]['lastname'], i)}}</span>
+                        <span class="h6 link">@{{cycle(following[i]['username'], i)}}</span>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>

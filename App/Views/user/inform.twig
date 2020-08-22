@@ -1,0 +1,13 @@
+{% extends 'layouts/default.twig' %}
+{% block title %}Inform{% endblock %}
+{% block content %}
+<body class="inform-body">
+<main role="main" class="container-fluid inform-body-main">
+    <div class="row inform-row">
+        {{ include('user/blocks/header.twig') }}
+        {{ include('user/blocks/min-profile-card.twig') }}
+        {{ include('user/blocks/personal-change.twig') }}
+        {{ include('user/blocks/footer-bird.twig') }}
+    </div>
+</main>
+{% endblock %}

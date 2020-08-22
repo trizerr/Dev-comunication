@@ -1,0 +1,95 @@
+.start-body {
+  background: url("../img/duotone.png");
+  font-family: HelveticaNeueCyr, sans-serif;
+}
+
+.index-button {
+  color: #fff;
+}
+
+.index-title {
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+}
+
+.focus-none:focus{
+  box-shadow: none;
+}
+
+.index-button:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.window-body {
+  margin-top: 100px;
+}
+
+.sonar-wrapper {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  padding: 8rem 0;
+  height: 100%;
+}
+
+/*!* The circle *!*/
+.sonar-emitter {
+  font-size: 35px;
+  line-height: 4.5em;
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 9999px;
+  border: 10px solid #e64e6c;
+  background-color: #fff;
+  text-align: center;
+  color: #e64e6c;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.sonar-emitter:hover{
+  background-color: #e64e6c;
+  border-color: #fff;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(230,78,108,0.5);
+}
+
+/*ircle-text {*/
+/*  font-size: 45px;*/
+/*  position: relative;*/
+/*  top: 20%;*/
+/*  text-align: center;*/
+/*color: #e6.c4e6c;*/
+/*}*/
+
+.sonar-emitter:hover > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: #e64e6c;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sonar-wave {
+  animation: sonarWave 2s linear infinite;
+}
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+

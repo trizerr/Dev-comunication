@@ -1,0 +1,35 @@
+{% if  users != null %}
+    {% for i in 0..users|length-1 %}
+        <div class="col-12 col-md-8 col-xl-7">
+            <div class="row person-menu p-3" style="background-color: #fff">
+                <div class="search-person">
+                    <!-- ЗДЕСЬ БУДУТ ДАННЫЕ С ПОИСКА -->
+                    <div class="d-flex flex-row p-2">
+                        <img class="user-avatar" src="{{ server }}{{ cycle(users[i]['photo'], i) }}"/>
+                        <div class="d-flex flex-column p-3 ">
+                            <span class="h5 text-dark font-weight-bold m-0"></span>
+                            <span class="h5 link">{{ cycle(users[i]['firstname'], i) }} {{ cycle(users[i]['lastname'], i) }}</span>
+                            <span class="h6 link">@{{ cycle(users[i]['username'], i) }}</span>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+                        <button id="button-user-{{ cycle(users[i]['id'], i) }}" type="button"
+                                class="btn user-card-body-btn-link text-light font-weight-bold rounded-pill col-md-6 col-lg-6 col-sm-6 col-6"
+                                style="background-color: #0084B4;border: none" onclick="followUnfollow('{{ cycle(users[i]['id'], i) }}',
+                                'button-user-{{ cycle(users[i]['id'], i) }}')">{{ cycle(users[i]['isfollowing'], i) }}</button>
+                        <a href="../user/{{ cycle(users[i]['id'], i) }}"
+                           class="btn user-card-body-btn-link text-light font-weight-bold rounded-pill  col-md-6 col-lg-6 col-sm-6 col-6"
+                           style="background-color:#e64e6c">Profile</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <br>
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,9 @@
+{% for i in 0..posts|length %}
+    <script>
+
+        {% if  cycle(posts[i]['body'], i) is not empty %}
+
+        tweets({{cycle(posts[i]['id'], i)}},"{{cycle(posts[i]['username'], i)}}",{{cycle(posts[i]['user_id'], i)}},"{{cycle(posts[i]['author'], i)}}", "{{cycle(posts[i]['created_at'], i)}}","{{ cycle(posts[i]['body'], i) }}","{{ cycle(posts[i]['photo'], i) }}","{{ server }}","{{ cycle(posts[i]['firstname'], i) }}","{{ cycle(posts[i]['lastname'], i) }}","{{ cycle(posts[i]['image'], i) }}");
+        {% endif %}
+    </script>
+{% endfor %}

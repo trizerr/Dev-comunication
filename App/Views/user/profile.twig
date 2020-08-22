@@ -1,0 +1,12 @@
+{% extends 'layouts/default.twig' %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+<body class="profile-body">
+    {{ include('user/blocks/header.twig') }}
+    {{ include('user/blocks/folow-panel.twig') }}
+
+    {{ include('user/blocks/main-header.twig') }}
+    {{ include('user/blocks/main.twig') }}
+    {{ include('user/blocks/right-side-panel.twig') }}
+    {{ include('user/blocks/footer-bird.twig') }}
+{% endblock %}

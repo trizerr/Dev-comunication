@@ -1,0 +1,25 @@
+{% for i in 0..person|length-1 %}
+<div class="card user-card mx-1 col-md-12 col-lg-5 col-xl-5 p-0 mt-2" >
+    <div class="card-header user-card-header"></div>
+    <div class="card-body d-flex pl-5">
+        <div class="col-4 position-relative">
+            <div class="p-0 card-bio-avatar rounded-pill position-absolute">
+                <img class="rounded-pill " src="{{server}}{{cycle(person[i]['photo'], i)}}" />
+            </div>
+        </div>
+        <div class="col-8">
+            <h5 class="card-title font-weight-bold">{{cycle(person[i]['firstname'], i)}} {{cycle(person[i]['lastname'], i)}}</h5>
+            <p class="card-text">
+                <a href="#" class="mr-1 text-secondary">@{{cycle(person[i]['username'], i)}}</a>
+                <span href="#" class="text-secondary bg-light"></span></p>
+        </div>
+    </div>
+    <div class="card-body user-card-body-btn">
+        <button id = "button-user-{{ cycle(person[i]['id'], i) }}{{ cycle(person[i]['followers'], i) }}" class="btn user-card-body-btn-link text-light font-weight-bold rounded-pill" style="background-color:#e64e6c"
+           onclick="followUnfollow('{{ cycle(person[i]['id'], i) }}',
+                   'button-user-{{ cycle(person[i]['id'], i) }}{{cycle(person[i]['followers'], i)}}')"
+        >{{cycle(person[i]['isfollowing'], i)}}</button>
+        <a href="../user/{{cycle(person[i]['id'], i)}}" class="btn user-card-body-btn-link text-light font-weight-bold rounded-pill ml-5" style="background-color:#e64e6c">Profile</a>
+    </div>
+</div>
+{% endfor %}
