@@ -3,7 +3,7 @@
 
 
 namespace Core;
-
+use Controllers;
 
 
 class Router
@@ -44,9 +44,9 @@ class Router
      public function run(){
 
        if($this-> match()){
-         $path = ucfirst($this->params['controller'].'Controller');
-           var_dump($path);
-         if(class_exists($path)){
+         $path = 'Controllers'. DIRECTORY_SEPARATOR . ucfirst($this->params['controller'].'Controller');
+          // var_dump($path);
+         //if(class_exists($path)){
              var_dump("nicer");
             $action = $this->params['action'].'Action';
             if(method_exists($path, $action)){
@@ -56,9 +56,9 @@ class Router
             }else{
                 View::errorCode(404);
             }
-         }else{
-            View::errorCode(404);
-         }
+         //}else{
+         //   View::errorCode(404);
+         //}
        }else{
         View::errorCode(404);
        }
