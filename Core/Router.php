@@ -44,12 +44,12 @@ class Router
 
        if($this-> match()){
          $path = 'Controllers'. '\\' . ucfirst($this->params['controller'].'Controller');
-           var_dump($path);
+
          if(class_exists($path)){
-             var_dump("nicer");
+
             $action = $this->params['action'].'Action';
             if(method_exists($path, $action)){
-                var_dump("niceeer");
+
                 $controller = new $path($this->params);
                 $controller->$action();
             }else{
