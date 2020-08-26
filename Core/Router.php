@@ -30,6 +30,7 @@ class Router
     public function match()
     {
         $url = trim($_SERVER['REQUEST_URI'], '/');
+        var_dump($url);
         foreach ($this->routes as $route => $params)
         {
             if (preg_match($route, $url, $matches))
