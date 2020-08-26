@@ -44,7 +44,7 @@ class Router
      public function run(){
 
        if($this-> match()){
-         $path = ROOTHPATH . DIRECTORY_SEPARATOR . 'Controllers'. DIRECTORY_SEPARATOR . ucfirst($this->params['controller'].'Controller');
+         $path = ucfirst($this->params['controller'].'Controller');
            var_dump($path);
          if(class_exists($path)){
              var_dump("nicer");
