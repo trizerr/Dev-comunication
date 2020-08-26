@@ -44,8 +44,8 @@ class Router
      public function run(){
 
        if($this-> match()){
-           var_dump("nice");
          $path = 'Controllers'. DIRECTORY_SEPARATOR . ucfirst($this->params['controller'].'Controller');
+           var_dump($path);
          if(class_exists($path)){
              var_dump("nicer");
             $action = $this->params['action'].'Action';
