@@ -30,7 +30,7 @@ class Router
     public function match()
     {
         $url = trim($_SERVER['REQUEST_URI'], '/');
-        var_dump($url);
+
         foreach ($this->routes as $route => $params)
         {
             if (preg_match($route, $url, $matches))
@@ -44,11 +44,13 @@ class Router
      public function run(){
 
        if($this-> match()){
-           
+           var_dump("nice");
          $path = 'Controllers'. DIRECTORY_SEPARATOR . ucfirst($this->params['controller'].'Controller');
          if(class_exists($path)){
+             var_dump("nicer");
             $action = $this->params['action'].'Action';
             if(method_exists($path, $action)){
+                var_dump("niceeer");
                 $controller = new $path($this->params);
                 $controller->$action();
             }else{
