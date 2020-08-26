@@ -15,7 +15,7 @@ class Application
     require_once __DIR__ . '/consts.php';
 
     static::$db = new Database();
-
+    var_dump(class_exists('Controllers/PageController'));
     $router = new Router();
 
     $router ->run();
